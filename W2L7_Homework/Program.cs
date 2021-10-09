@@ -74,17 +74,21 @@ namespace W2L7_Homework
             Console.WriteLine("Podaj ile masz lat: ");
             int age = Int32.Parse(Console.ReadLine());
 
-            if (age >= 18)
+            if (age >= 21 && age < 30)
             {
-                Console.WriteLine("Możesz zostać premierem");
+                Console.WriteLine("Możesz zostać posłem, premierem");
             }
-            else if (age>=21)
-            {
-                Console.WriteLine("Możesz zostać premierem, posłem");
-            }
-            else if (age >=30)
+            else if (age >= 30 && age < 35)
             {
                 Console.WriteLine("Możesz zostać premierem, senatorem");
+            }
+            else if (age >= 35)
+            {
+                Console.WriteLine("Możesz zostać prezydentem");
+            }
+            else
+            {
+                Console.WriteLine("Za młody do polityki");
             }
         }
     }
